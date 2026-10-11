@@ -1679,6 +1679,7 @@ export default function App() {
           color="gray"
           highContrast
           aria-label="Files"
+          title="Files"
           aria-pressed={rail === 'files' && layout.sidebarOpen && !layout.focusMode}
           onClick={() => selectRail('files')}
         >
@@ -1696,6 +1697,7 @@ export default function App() {
           color="gray"
           highContrast
           aria-label="Tags"
+          title="Tags"
           aria-pressed={rail === 'tags' && layout.sidebarOpen && !layout.focusMode}
           onClick={() => selectRail('tags')}
         >
@@ -1746,6 +1748,7 @@ export default function App() {
           color="gray"
           highContrast
           aria-label={layout.focusMode ? 'Exit focus mode' : 'Focus mode'}
+          title={layout.focusMode ? 'Exit focus mode (Esc)' : `Focus mode (${shortcutWithShift('F')})`}
           aria-pressed={layout.focusMode}
           onClick={toggleFocusMode}
         >
@@ -1763,6 +1766,7 @@ export default function App() {
           color="gray"
           highContrast
           aria-label="Settings"
+          title="Settings"
           onClick={() => setOverlay('settings')}
         >
           <GearIcon width={18} height={18} />
